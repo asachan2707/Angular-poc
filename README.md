@@ -1,2 +1,6 @@
 # Angular-poc
-Change detection, Observarable, service worker, unit testing, httpclient
+   # Change detection 
+   # Observarable 
+   # service worker 
+   # unit testing 
+   # httpclient
