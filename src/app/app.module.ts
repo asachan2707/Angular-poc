@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { VirtualScrollerModule } from 'ngx-virtual-scroller';
 
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { ProductData } from './products/product-data';
@@ -20,6 +21,7 @@ import { ProductGridComponent } from './products/product-grid/product-grid.compo
 import { ProductChartComponent } from './products/product-chart/product-chart.component';
 import { SharedModule } from './shared/shared.module';
 import { ProductEditComponent } from './products/product-edit/product-edit.component';
+import { ProductTableComponent } from './products/product-table/product-table.component';
 
 @NgModule({
   imports: [
@@ -28,7 +30,8 @@ import { ProductEditComponent } from './products/product-edit/product-edit.compo
     HttpClientInMemoryWebApiModule.forRoot(ProductData),
     ROUTING,
     UserModule,
-    SharedModule
+    SharedModule,
+    VirtualScrollerModule
   ],
   declarations: [
     AppComponent,
@@ -40,7 +43,8 @@ import { ProductEditComponent } from './products/product-edit/product-edit.compo
     ProductEditComponent,
     ProductGridComponent,
     ProductChartComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    ProductTableComponent
   ],
   bootstrap: [AppComponent]
 })

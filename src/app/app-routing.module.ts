@@ -10,6 +10,7 @@ import { ProductListComponent } from './products/product-list/product-list.compo
 import { ProductShellComponent } from './products/product-shell/product-shell.component';
 import { ProductGridComponent } from './products/product-grid/product-grid.component';
 import { ProductChartComponent } from './products/product-chart/product-chart.component';
+import { ProductTableComponent } from './products/product-table/product-table.component';
 
 const appRoutes: Routes = [
   {
@@ -19,6 +20,7 @@ const appRoutes: Routes = [
       { path: 'welcome', component: WelcomeComponent },
       { path: 'products', canActivate: [AuthGuard], component: ProductListComponent },
       { path: 'product-grid', canActivate: [AuthGuard], component: ProductGridComponent },
+      { path: 'product-table', component: ProductTableComponent },
       { path: 'product-chart', component: ProductChartComponent },
       { path: '', redirectTo: 'welcome', pathMatch: 'full' },
     ]
